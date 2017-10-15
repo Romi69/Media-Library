@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace MediaLibrary
 {
@@ -11,5 +12,7 @@ namespace MediaLibrary
         public DateTime Date { get; set; }
         public string NameOfPerson { get; set; }
         public string Comment { get; set; }
+
+        public ICollection<Content> Contents { get; set; }
     }
 }

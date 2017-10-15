@@ -12,6 +12,6 @@ namespace MediaLibrary
         public string Name { get; set; }
         public int Capacity { get; set; }
 
-        public ICollection<Media> Contents { get; set; }
+        public ICollection<Content> Contents { get; set; }
     }
 }

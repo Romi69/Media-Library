@@ -9,6 +9,6 @@ namespace MediaLibrary
         public Manufacturer Manufacturer { get; set; }
         public MunafType MType { get; set; }
 
-        public ICollection<Media> Contents { get; set; }
+        public ICollection<Content> Contents { get; set; }
     }
 }

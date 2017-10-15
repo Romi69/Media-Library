@@ -10,6 +10,6 @@ namespace MediaLibrary
         public int Id { get; set; }
         public string Name { get; set; }
 
-        public ICollection<Media> Contents { get; set; }
+        public ICollection<Content> Contents { get; set; }
     }
 }

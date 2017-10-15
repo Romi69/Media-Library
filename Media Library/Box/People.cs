@@ -9,6 +9,6 @@ namespace MediaLibrary
         public string Nationality { get; set; }
 
 
-        public ICollection<Media> Contents { get; set; }
+        public ICollection<Content> Contents { get; set; }
     }
 }

@@ -6,7 +6,7 @@ namespace MediaLibrary
     /// <summary>
     /// 
     /// </summary>
-    public class Media
+    public class Content
     {
         public int Id { get; set; }
         public Media ContMedia { get; set; }
