@@ -6,15 +6,16 @@ namespace MediaLibrary
     /// <summary>
     /// 
     /// </summary>
-    public class Content
+    public class Media
     {
         public int Id { get; set; }
-        public Media Media { get; set; }
+        public Media ContMedia { get; set; }
         public Box Box { get; set; }
         public int Position { get; set; }
         public string Title { get; set; }
         public string HungarianTitle { get; set; }
         public Category Category { get; set; }
+        public DateTime CreationDate { get; set; }
         public ICollection<Language> Audio{ get; set; }
         public ICollection<Language> Subtitle { get; set; }
         // Szikronizált?

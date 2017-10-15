@@ -1,4 +1,6 @@
-﻿namespace MediaLibrary
+﻿using System.Collections.Generic;
+
+namespace MediaLibrary
 {
     public class Media
     {
@@ -7,5 +9,6 @@
         public Manufacturer Manufacturer { get; set; }
         public MunafType MType { get; set; }
 
+        public ICollection<Media> Contents { get; set; }
     }
 }

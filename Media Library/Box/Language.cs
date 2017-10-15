@@ -1,4 +1,6 @@
-﻿namespace MediaLibrary
+﻿using System.Collections.Generic;
+
+namespace MediaLibrary
 {
     /// <summary>
     /// Angol/Francia/Magyar
@@ -7,5 +9,7 @@
     {
         public int Id { get; set; }
         public string Type { get; set; }
+
+        public ICollection<Media> Contents{ get; set; }
     }
 }
