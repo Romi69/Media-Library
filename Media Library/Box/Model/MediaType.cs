@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 
-namespace MediaLibrary
+namespace MediaLibrary.Model
 {
     /// <summary>
-    /// DVD-R/DVD-R Printable/CD 74min
+    /// CD/DVD/BD/Digital8/...
     /// </summary>
-    public class ManufType
+    public class MediaType
     {
         public int Id { get; set; }
         public string Type { get; set; }

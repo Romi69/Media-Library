@@ -1,16 +1,15 @@
 ﻿using System.Collections.Generic;
 
-namespace MediaLibrary
+namespace MediaLibrary.Model
 {
     /// <summary>
-    /// CD/DVD/BD/Digital8/...
+    /// Angol/Francia/Magyar
     /// </summary>
-    public class MediaType
+    public class Language
     {
         public int Id { get; set; }
         public string Type { get; set; }
 
-        public ICollection<Media> Medias { get; set; }
-
+        public ICollection<Content> Contents{ get; set; }
     }
 }

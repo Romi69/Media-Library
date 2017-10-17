@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace MediaLibrary
+namespace MediaLibrary.Model
 {
     /// <summary>
     /// Kölcsönadva

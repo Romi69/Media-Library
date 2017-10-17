@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MediaLibrary
+namespace MediaLibrary.Model
 {
     public class Box
     {

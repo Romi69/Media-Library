@@ -9,10 +9,15 @@ namespace MediaLibrary.Model
 {
     public class DataContext : DbContext
     {
-        public DbSet<Param> Params;
-        public DbSet<People> Peoples;
-        public DbSet<OutOfBox> OutOfBoxes;
-        public DbSet<Media> Medias;
-        public DbSet<Content> Contents;
+        public DbSet<Param> Params { get; set; }
+        public DbSet<People> Peoples { get; set; }
+        public DbSet<OutOfBox> OutOfBoxes { get; set; }
+        public DbSet<Media> Medias { get; set; }
+        public DbSet<Content> Contents { get; set; }
+
+        public DataContext() : base("name=MediaLibrary")
+        {
+
+        }
     }
 }

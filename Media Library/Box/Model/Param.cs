@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MediaLibrary
+namespace MediaLibrary.Model
 {
     public enum ParamType { Box, Category, Language, Manufacturer, MediaType, ManufType}
     public class Param

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MediaLibrary
+namespace MediaLibrary.Model
 {
     public class People
     {
