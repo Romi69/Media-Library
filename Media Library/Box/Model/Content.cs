@@ -30,5 +30,12 @@ namespace MediaLibrary.Model
         public string Comment { get; set; }
         public bool MarkForDelete { get; set; }
 
+        public Content()
+        {
+            Audio = new List<Language>();
+            Subtitle = new List<Language>();
+            Directors = new List<People>();
+            Actors = new List<People>();
+        }
     }
 }

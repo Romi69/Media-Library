@@ -14,5 +14,9 @@ namespace MediaLibrary.Model
         public string Comment { get; set; }
 
         public ICollection<Content> Contents { get; set; }
+        public OutOfBox()
+        {
+            Contents = new List<Content>();
+        }
     }
 }

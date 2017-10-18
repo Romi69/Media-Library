@@ -11,5 +11,9 @@ namespace MediaLibrary.Model
         public string Name { get; set; }
 
         public ICollection<Media> Medias { get; set; }
+        public Manufacturer()
+        {
+            Medias = new List<Media>();
+        }
     }
 }

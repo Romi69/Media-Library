@@ -70,7 +70,7 @@ namespace MediaLibrary.Test
                 int count = db.Params.Count();
 
                 //Assert
-                Assert.AreEqual(0, count);
+                Assert.AreEqual(9, count);
             }
         }
 
@@ -80,12 +80,17 @@ namespace MediaLibrary.Test
             // Act
             using (DataContext db = new DataContext())
             {
-                db.Params.Add(new Param() { ParamId = 1, ParamType = ParamType.Box, IntValue = 300 });
+                Param pr = new Param() { ParamId = 1, ParamType = ParamType.Box, IntValue = 300 };
+
+                db.Params.Add(pr);
                 db.SaveChanges();
 
                 int count = db.Params.Count();
-                Assert.AreEqual(1, count);
-            }
+                Assert.AreEqual(10, count);
+
+                db.Params.Remove(pr);
+                db.SaveChanges();
+            }            
         }
     }
 }

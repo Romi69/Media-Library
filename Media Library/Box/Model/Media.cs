@@ -10,5 +10,9 @@ namespace MediaLibrary.Model
         public ManufType MType { get; set; }
 
         public ICollection<Content> Contents { get; set; }
+        public Media()
+        {
+            Contents = new List<Content>();
+        }
     }
 }

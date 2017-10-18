@@ -13,5 +13,10 @@ namespace MediaLibrary.Model
         public int Capacity { get; set; }
 
         public ICollection<Content> Contents { get; set; }
+
+        public Box()
+        {
+            Contents = new List<Content>();
+        }
     }
 }

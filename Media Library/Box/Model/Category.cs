@@ -11,5 +11,9 @@ namespace MediaLibrary.Model
         public string Name { get; set; }
 
         public ICollection<Content> Contents { get; set; }
+        public Category()
+        {
+            Contents = new List<Content>();
+        }
     }
 }

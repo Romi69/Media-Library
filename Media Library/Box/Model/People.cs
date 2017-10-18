@@ -10,5 +10,9 @@ namespace MediaLibrary.Model
 
 
         public ICollection<Content> Contents { get; set; }
+        public People()
+        {
+            Contents = new List<Content>();
+        }
     }
 }
