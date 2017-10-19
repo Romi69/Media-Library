@@ -61,6 +61,10 @@
       <Project>{cfe8f5ec-f4ac-405a-98d9-65e1a858f814}</Project>
       <Name>MediaLibrary</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MediaLibrary.Test\MediaLibrary.Test.csproj">
+      <Project>{5b934e32-090b-4267-96d3-314ba79ac97b}</Project>
+      <Name>MediaLibrary.Test</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Repository\Repository.csproj">
       <Project>{2bc92532-37db-460e-b778-7f4ac453b1dd}</Project>
       <Name>Repository</Name>

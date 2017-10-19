@@ -26,20 +26,24 @@ namespace MediaLibrary.Test
             //Box three = new Box() { Name = "Box 3 (700)", Capacity = 700 };            
 
             Param manufVer = new Param() { ParamType = ParamType.Manufacturer, ParamId = 1, StringValue = "Verbatim" };
-            Param manufPhil = new Param() { ParamType = ParamType.Manufacturer, ParamId = 1, StringValue = "Philips" };
-            Param manufTdk = new Param() { ParamType = ParamType.Manufacturer, ParamId = 1, StringValue = "TDK" };
+            Param manufPhil = new Param() { ParamType = ParamType.Manufacturer, ParamId = 2, StringValue = "Philips" };
+            Param manufTdk = new Param() { ParamType = ParamType.Manufacturer, ParamId = 3, StringValue = "TDK" };
 
             db.Params.Add(manufVer);
             db.Params.Add(manufPhil);
             db.Params.Add(manufTdk);
 
-            Param mediaCd = new Param() { ParamType = ParamType.MediaType, IntValue = 1, StringValue = "CD" };
-            Param mediaCdRW = new Param() { ParamType = ParamType.MediaType, IntValue = 2, StringValue = "CD+RW" };
-            Param mediaDVD = new Param() { ParamType = ParamType.MediaType, IntValue = 3, StringValue = "DVD" };
+            Param mediaCd = new Param() { ParamType = ParamType.MediaType, ParamId = 1, StringValue = "CD" };
+            Param mediaCdRW = new Param() { ParamType = ParamType.MediaType, ParamId = 2, StringValue = "CD+RW" };
+            Param mediaDVD = new Param() { ParamType = ParamType.MediaType, ParamId = 3, StringValue = "DVD" };
 
             db.Params.Add(mediaCd);
             db.Params.Add(mediaCdRW);
             db.Params.Add(mediaDVD);
+
+            Param x = new Param() { ParamType = ParamType.Language, ParamId = 99, StringValue = "Törlendő nyelv" };
+            db.Params.Add(x);
+
 
             db.SaveChanges();
             base.Seed(db);

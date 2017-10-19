@@ -1,5 +1,6 @@
 ﻿using System;
 using MediaLibrary.Model;
+using System.Data.Entity;
 
 namespace Repository
 {
@@ -20,6 +21,27 @@ namespace Repository
         public Param Find(int Id)
         {
             return db.Params.Find(Id);
+        }
+
+        public void Remove(Param oldParam)
+        {
+            db.Params.Remove(oldParam);
+        }
+
+        public void Update(Param oldParam)
+        {
+            var entry = db.Entry(oldParam);
+
+            if(entry.State == EntityState.Detached)
+            {
+                db.Set<Param>().Attach(oldParam);
+            }
+
+            if(entry.State!= EntityState.Modified)
+            {
+                entry.State = EntityState.Modified;
+            }
+            
         }
     }
 }

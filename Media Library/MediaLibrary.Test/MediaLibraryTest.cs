@@ -70,7 +70,7 @@ namespace MediaLibrary.Test
                 int count = db.Params.Count();
 
                 //Assert
-                Assert.AreEqual(9, count);
+                Assert.AreEqual(10, count);
             }
         }
 
@@ -86,7 +86,7 @@ namespace MediaLibrary.Test
                 db.SaveChanges();
 
                 int count = db.Params.Count();
-                Assert.AreEqual(10, count);
+                Assert.AreEqual(11, count);
 
                 db.Params.Remove(pr);
                 db.SaveChanges();
