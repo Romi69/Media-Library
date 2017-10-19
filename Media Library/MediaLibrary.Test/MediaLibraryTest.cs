@@ -11,9 +11,9 @@ namespace MediaLibrary.Test
     /// Summary description for MediaLibrary
     /// </summary>
     [TestClass]
-    public class MediaLibrary
+    public class MediaLibraryTest
     {
-        public MediaLibrary()
+        public MediaLibraryTest()
         {
             //
             // TODO: Add constructor logic here

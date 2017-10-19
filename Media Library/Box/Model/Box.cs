@@ -18,5 +18,13 @@ namespace MediaLibrary.Model
         {
             Contents = new List<Content>();
         }
+
+        public Box(String name, int capacity)
+        {
+            Contents = new List<Content>();
+
+            Name = name;
+            Capacity = capacity;            
+        }
     }
 }

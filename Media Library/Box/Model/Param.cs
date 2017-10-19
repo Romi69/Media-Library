@@ -16,5 +16,19 @@ namespace MediaLibrary.Model
         public double DoubleValue { get; set; }
         public string StringValue { get; set; }
 
+        public Param()
+        {
+
+        }
+
+        public Param(ParamType paramType, int paramId = -1, int intValue = 0, double doubleValue = 0, string stringValue = null)
+        {
+            ParamType = paramType;
+            ParamId = paramId;
+            IntValue = intValue;
+            DoubleValue = doubleValue;
+            StringValue = stringValue ?? String.Empty;
+        }
+
     }
 }

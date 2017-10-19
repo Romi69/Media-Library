@@ -11,7 +11,7 @@ namespace MediaLibrary.Test
     class TestDataInitializer : DropCreateDatabaseAlways<DataContext>
     {
         protected override void Seed(DataContext db)
-        {
+        {            
             Param boxOne = new Param() { ParamType = ParamType.Box, ParamId = 1, IntValue = 600, StringValue = "Box 1 (600)" };
             Param boxTwo = new Param() { ParamType = ParamType.Box, ParamId = 2, IntValue = 600, StringValue = "Box 2 (600)" };
             Param boxThree = new Param() { ParamType = ParamType.Box, ParamId = 3, IntValue = 700, StringValue = "Box 3 (700)" };
@@ -19,6 +19,11 @@ namespace MediaLibrary.Test
             db.Params.Add(boxOne);
             db.Params.Add(boxTwo);
             db.Params.Add(boxThree);
+            
+
+            //Box one = new Box() { Name = "Box 1 (600)", Capacity = 600 };
+            //Box two = new Box() { Name = "Box 2 (600)", Capacity = 600 };
+            //Box three = new Box() { Name = "Box 3 (700)", Capacity = 700 };            
 
             Param manufVer = new Param() { ParamType = ParamType.Manufacturer, ParamId = 1, StringValue = "Verbatim" };
             Param manufPhil = new Param() { ParamType = ParamType.Manufacturer, ParamId = 1, StringValue = "Philips" };
