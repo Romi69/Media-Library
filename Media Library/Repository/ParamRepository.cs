@@ -4,37 +4,38 @@ using System.Data.Entity;
 
 namespace Repository
 {
-    public class ParamRepository
+    public class GeneralRepository<TEntity> 
+        where TEntity : class
     {
         private DataContext db;
 
-        public ParamRepository(DataContext db)
+        public GeneralRepository(DataContext db)
         {
             this.db = db;
         }
 
-        public void Add(Param param)
+        public void Add(TEntity entity)
         {
-            db.Params.Add(param);
+            db.Set<TEntity>().Add(entity);
         }
 
-        public Param Find(params object[] keys)
+        public TEntity Find(params object[] keys)
         {
-            return db.Params.Find(keys);
+            return db.Set<TEntity>().Find(keys);
         }
 
-        public void Remove(Param oldParam)
+        public void Remove(TEntity entity)
         {
-            db.Params.Remove(oldParam);
+            db.Set<TEntity>().Remove(entity);
         }
 
-        public void Update(Param oldParam)
+        public void Update(TEntity entity)
         {
-            var entry = db.Entry(oldParam);
+            var entry = db.Entry(entity);
 
             if(entry.State == EntityState.Detached)
             {
-                db.Set<Param>().Attach(oldParam);
+                db.Set<TEntity>().Attach(entity);
             }
 
             if(entry.State!= EntityState.Modified)

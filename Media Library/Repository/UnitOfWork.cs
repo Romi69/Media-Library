@@ -11,12 +11,12 @@ namespace Repository
     {
         private DataContext db;
 
-        public ParamRepository ParamRepository { get; set; }
+        public GeneralRepository<Param> ParamRepository { get; set; }
 
         public UnitOfWork()
         {
             db = new DataContext();
-            ParamRepository = new ParamRepository(db);
+            ParamRepository = new GeneralRepository<Param>(db);
         }
 
         public void Save()
