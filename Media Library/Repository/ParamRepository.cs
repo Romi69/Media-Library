@@ -18,9 +18,9 @@ namespace Repository
             db.Params.Add(param);
         }
 
-        public Param Find(int Id)
+        public Param Find(params object[] keys)
         {
-            return db.Params.Find(Id);
+            return db.Params.Find(keys);
         }
 
         public void Remove(Param oldParam)

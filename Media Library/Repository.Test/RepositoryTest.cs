@@ -1,6 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
 using MediaLibrary.Model;
+using System.Data.Entity.Infrastructure;
 
 namespace Repository.Test
 {
@@ -11,7 +12,7 @@ namespace Repository.Test
         public void RepositoryTest_Param_AddedParamShouldBeAppearInRepo()
         {
             UnitOfWork uow = new UnitOfWork();
-            Param param = new Param() { ParamType = ParamType.MediaType, ParamId = 1, StringValue = "CD+"};
+            Param param = new Param() { ParamType = ParamType.MediaType, ParamId = 1, StringValue = "CD+" };
 
             uow.ParamRepository.Add(param);
             uow.Save();
@@ -49,5 +50,26 @@ namespace Repository.Test
             Param newParam = uow.ParamRepository.Find(11);
             Assert.AreEqual(newName, newParam.StringValue);
         }
+
+        [Test]
+        public void RepositoryTest_Param_FindParam()
+        {
+            UnitOfWork uow = new UnitOfWork();
+
+            Param param = uow.ParamRepository.Find(1);
+            Assert.AreEqual("Box 1 (600)", param.StringValue);
+        }
+
+        //[Test]
+        //public void RepositoryTest_Param_DeletedParam1ShouldBeThrowException()
+        //{
+        //    UnitOfWork uow = new UnitOfWork();
+
+        //    Param param = uow.ParamRepository.Find(10);
+        //    uow.ParamRepository.Remove(param);
+        //    uow.Save();
+
+        //    Assert.Throws<DbUpdateException>(uow.Save);
+        //}
     }
 }
