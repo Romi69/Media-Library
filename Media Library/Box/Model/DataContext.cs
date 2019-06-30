@@ -15,9 +15,17 @@ namespace MediaLibrary.Model
         public DbSet<Media> Medias { get; set; }
         public DbSet<Content> Contents { get; set; }
 
+
         public DataContext() : base("name=MediaLibrary")
         {
 
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            //modelBuilder.Entity<Box>().Map<Param>(c => c.Requires("ParamType").HasValue(ParamType.Box));
+            modelBuilder.Entity<Box>().ToTable("Params");
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

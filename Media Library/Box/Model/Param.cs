@@ -16,6 +16,7 @@ namespace MediaLibrary.Model
         public double DoubleValue { get; set; }
         public string StringValue { get; set; }
 
+
         public Param()
         {
 
@@ -29,6 +30,5 @@ namespace MediaLibrary.Model
             DoubleValue = doubleValue;
             StringValue = stringValue ?? String.Empty;
         }
-
     }
 }

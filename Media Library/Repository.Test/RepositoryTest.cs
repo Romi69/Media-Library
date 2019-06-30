@@ -5,8 +5,9 @@ using System.Data.Entity.Infrastructure;
 
 namespace Repository.Test
 {
+    [Category("Integration")]
     [TestFixture]
-    public class RepositoryTest
+    public class ParamRepositoryTest
     {
         [Test]
         public void RepositoryTest_Param_AddedParamShouldBeAppearInRepo()

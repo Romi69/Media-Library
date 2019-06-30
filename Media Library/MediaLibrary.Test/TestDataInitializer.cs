@@ -12,16 +12,18 @@ namespace MediaLibrary.Test
     {
         protected override void Seed(DataContext db)
         {            
-            Param boxOne = new Param() { ParamType = ParamType.Box, ParamId = 1, IntValue = 600, StringValue = "Box 1 (600)" };
+            /*Param boxOne = new Param() { ParamType = ParamType.Box, ParamId = 1, IntValue = 600, StringValue = "Box 1 (600)" };
             Param boxTwo = new Param() { ParamType = ParamType.Box, ParamId = 2, IntValue = 600, StringValue = "Box 2 (600)" };
             Param boxThree = new Param() { ParamType = ParamType.Box, ParamId = 3, IntValue = 700, StringValue = "Box 3 (700)" };
 
             db.Params.Add(boxOne);
             db.Params.Add(boxTwo);
-            db.Params.Add(boxThree);
+            db.Params.Add(boxThree);*/
             
 
-            //Box one = new Box() { Name = "Box 1 (600)", Capacity = 600 };
+            Box one = new Box() { Name = "Box 1 (600)", Capacity = 600 };
+            db.Params.Add(one.ConvertToParam());
+
             //Box two = new Box() { Name = "Box 2 (600)", Capacity = 600 };
             //Box three = new Box() { Name = "Box 3 (700)", Capacity = 700 };            
 

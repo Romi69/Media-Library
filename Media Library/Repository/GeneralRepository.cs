@@ -41,8 +41,7 @@ namespace Repository
             if(entry.State!= EntityState.Modified)
             {
                 entry.State = EntityState.Modified;
-            }
-            
+            }            
         }
     }
 }

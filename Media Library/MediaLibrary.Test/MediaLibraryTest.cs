@@ -92,5 +92,26 @@ namespace MediaLibrary.Test
                 db.SaveChanges();
             }            
         }
+
+        [TestMethod]
+        public void ML_AddBoxToParamTable()
+        {
+            using( DataContext db = new DataContext())
+            {
+                int oldsize = db.Params.Count();
+
+                Box box = new Box() { Name = "Box 1 (600)", Capacity = 600 };
+                db.Params.Add(box.ConvertToParam());
+                db.SaveChanges();                
+
+                //var curBox = db.Params.Find(x => x.ParamType == ParamType.Box && x.)
+                db.Params.Remove(box.ConvertToParam());
+                db.SaveChanges();
+                
+                Assert.AreEqual(oldsize, db.Params.Count());
+            }
+            
+            
+        }
     }
 }
